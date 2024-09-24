@@ -1,0 +1,318 @@
+/* Global styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #110233, #490570, #85123e);
+    color: white;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Rolagem suave */
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave */
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px 50px 50px;
+    height: 100vh;
+}
+
+.btn-primary {
+    font-family: 'Press Start 2P', cursive; /* Fonte pixelada retro */
+    background-color: #ff006e;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 5px solid #ffbf00;
+    display: inline-block;
+    position: relative;
+    font-size: 1rem;
+    margin-top: 20px;
+    box-shadow: 0 0 0 5px #ffbf00, 0 0 0 10px #ff006e;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0 0 0 5px #ffbf00, 0 0 0 10px #ff006e, 0 0 15px 10px rgba(255, 191, 0, 0.5);
+}
+
+.btn-primary:active {
+    transform: scale(1.05);
+    box-shadow: none;
+}
+
+.btn-primary::before, .btn-primary::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid white;
+    top: 5px;
+    left: 5px;
+    z-index: -1;
+    background-color: #ffbf00;
+}
+
+.btn-primary::after {
+    top: 10px;
+    left: 10px;
+    background-color: #ff006e;
+}
+
+.hero-content {
+    color: white;
+    padding: 50px;
+    flex: 1;
+}
+
+.hero-image img {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 60px;
+    line-height: 1.2;
+    color: #FFF;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    max-width: 400px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.read-docs {
+    font-size: 14px;
+    border-bottom: 1px solid #FFF;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.read-docs:hover {
+    color: #FFF700;
+    border-bottom-color: #FFF700;
+}
+
+/* How It Works Section */
+.how-it-works {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+}
+
+.how-it-works-content {
+    width: 50%;
+}
+
+.how-it-works-content h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    color: #FFF700;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.how-it-works-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.how-it-works-content ul li {
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.how-it-works-content ul li span {
+    display: inline-block;
+    background-color: #310c5f;
+    color: #FFF;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.2;
+    font-size: 24px;
+    padding: 10px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.how-it-works-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FFF700;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Primeira Seção - Stats */
+.stats-section {
+    padding: 40px 0;
+}
+
+.stats-box {
+    background-color: #090b12;
+    border: 3px solid #2a2a3f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.stat-left, .stat-right {
+    width: 30%;
+}
+
+.large-text {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sub-text {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.dice-icon {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dice-icon img {
+    width: 80px;
+    height: auto;
+}
+
+/* Segunda Seção - Promoção */
+.promo-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.promo-text {
+    text-align: center;
+    max-width: 50%;
+}
+
+.promo-main {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #ffffff;
+    text-shadow: 2px 2px 12px #000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.promo-highlight {
+    font-size: 2.5rem;
+    color: #FFF700;
+    text-shadow: 2px 2px #000;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.2;
+}
+
+.promo-image {
+    position: relative;
+}
+
+.promo-image img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+/* Terceira Seção - Victory */
+.victory-section {
+    padding: 50px 100px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.victory-title {
+    font-size: 3.5rem;
+    color: #ffffff;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px #000;
+    line-height: 1.2;
+}
+
+.victory-subtext {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 20px;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero, .how-it-works {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image, .how-it-works-image {
+        margin-top: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .how-it-works-content h2 {
+        font-size: 36px;
+    }
+}
